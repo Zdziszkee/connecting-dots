@@ -1,0 +1,33 @@
+# ==========================================
+# Haskell, Stack, and Cabal Gitignore Template
+# ==========================================
+
+# Stack build artifacts and local caches
+.stack-work/
+.stack-work-local/
+
+# Cabal build structures
+dist/
+dist-*
+cabal.project.local
+cabal.project.local~
+cabal.project.freeze
+.ghc.environment.*
+
+# Old Cabal Sandboxes (if applicable)
+.cabal-sandbox/
+cabal.sandbox.config
+
+# Haskell Language Server (HLS) caches
+.hie/
+
+# Editor-specific artifacts (Optional but helpful)
+.bloop/
+.metals/
+.ammonite/
+tags
+.history/
+
+# OS-specific clutter
+.DS_Store
+Thumbs.db

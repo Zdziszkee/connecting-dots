@@ -1,0 +1,62 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.39.1.
+--
+-- see: https://github.com/sol/hpack
+
+name:           connecting-dots
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/connecting-dots#readme>
+homepage:       https://github.com/githubuser/connecting-dots#readme
+bug-reports:    https://github.com/githubuser/connecting-dots/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2026 Author name here
+license:        BSD-3-Clause
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/connecting-dots
+
+executable generator-exe
+  main-is: Generator.hs
+  other-modules:
+      Paths_connecting_dots
+  autogen-modules:
+      Paths_connecting_dots
+  hs-source-dirs:
+      app/generator
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints -O2
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , deepseq
+    , mtl
+    , parallel
+    , random
+    , time
+  default-language: Haskell2010
+
+executable solver-exe
+  main-is: Solver.hs
+  other-modules:
+      Paths_connecting_dots
+  autogen-modules:
+      Paths_connecting_dots
+  hs-source-dirs:
+      app/solver
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints -O2 -threaded -rtsopts -with-rtsopts=-N4
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , deepseq
+    , mtl
+    , parallel
+    , random
+    , time
+  default-language: Haskell2010

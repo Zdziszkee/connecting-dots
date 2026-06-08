@@ -1,0 +1,46 @@
+name: connecting-dots
+version: 0.1.0.0
+github: "githubuser/connecting-dots"
+license: BSD-3-Clause
+author: "Author name here"
+maintainer: "example@example.com"
+copyright: "2026 Author name here"
+
+extra-source-files:
+  - README.md
+  - CHANGELOG.md
+
+description: Please see the README on GitHub at <https://github.com/githubuser/connecting-dots#readme>
+
+dependencies:
+  - base >= 4.7 && < 5
+  - containers
+  - deepseq
+  - mtl
+  - parallel
+  - random
+  - time
+
+ghc-options:
+  - -Wall
+  - -Wcompat
+  - -Widentities
+  - -Wincomplete-record-updates
+  - -Wincomplete-uni-patterns
+  - -Wpartial-fields
+  - -Wredundant-constraints
+
+executables:
+  solver-exe:
+    main: Solver.hs
+    source-dirs: app/solver
+    ghc-options:
+      - -O2
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N4
+  generator-exe:
+    main: Generator.hs
+    source-dirs: app/generator
+    ghc-options:
+      - -O2
